@@ -7,14 +7,18 @@ using System.Text;
 using System.Threading.Tasks;
 using InRaidStash.ExamplePatches;
 using InRaidStash.Patches;
+using EFT.Interactive;
+using UnityEngine;
 
 namespace InRaidStash
 {
     // first string below is your plugin's GUID, it MUST be unique to any other mod. Read more about it in BepInEx docs. Be sure to update it if you copy this project.
     [BepInPlugin("InRaidStash.UniqueGUID", "InRaidStash", "1.0.0")]
+
     public class Plugin : BaseUnityPlugin
     {
         public static ManualLogSource LogSource;
+        public static List<GameObject> ExfiltrationPointList = new List<GameObject>();
 
         // BaseUnityPlugin inherits MonoBehaviour, so you can use base unity functions like Awake() and Update()
         private void Awake()
@@ -27,6 +31,7 @@ namespace InRaidStash
             // new SimplePatch().Enable();
             new GameStartedPatch().Enable();
             new GetAvailableActionsPatch().Enable();
+            new ExfiltrationPointAwakePatch().Enable();
         }
     }
 }

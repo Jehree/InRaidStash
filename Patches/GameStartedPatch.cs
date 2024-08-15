@@ -44,12 +44,20 @@ namespace InRaidStash.Patches
             GameObject lootableContainerObj = GetLootableContainer("custom_test_container", CRATE_ID);
             lootableContainerObj.transform.position = player.Transform.position;
             LootableContainer lootableContainer = lootableContainerObj.GetComponentInChildren<LootableContainer>();
+            
+            foreach (GameObject exfilPoint in Plugin.ExfiltrationPointList)
+            {
+                Plugin.LogSource.LogError(exfilPoint.name);
+                AddRemoteInteractableComponent("exfil_stash_access", lootableContainer, exfilPoint);
+            }
 
-            GameObject remoteInteractableObj = GetRemoteInteractable("test_remote_interactable", lootableContainer);
+            GameObject remoteInteractableObj = AddRemoteInteractableComponent("test_remote_interactable", lootableContainer);
             Vector3 remotePos = new Vector3(player.Transform.position.x, player.Transform.position.y + 1.2f, player.Transform.position.z);
             remoteInteractableObj.transform.position = remotePos;
 
-
+            GameObject remoteInteractableObj2 = AddRemoteInteractableComponent("test_remote_interactable2", lootableContainer);
+            Vector3 remotePos2 = new Vector3(player.Transform.position.x, player.Transform.position.y + 1.2f, player.Transform.position.z + 1.2f);
+            remoteInteractableObj2.transform.position = remotePos2;
 
 
             /*
@@ -63,20 +71,43 @@ namespace InRaidStash.Patches
 
         }
 
-        public static GameObject GetRemoteInteractable(string name, LootableContainer stashContainer)
+        public static GameObject AddRemoteInteractableComponent(string name, LootableContainer stashContainer, GameObject gameObject=null)
         {
-            GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            obj.GetComponent<Renderer>().material.color = Color.blue;
-            obj.GetComponent<Renderer>().enabled = true;
-            obj.name = name;
-            obj.layer = 22; //interactable layer
+            GameObject obj;
+            if (gameObject == null)
+            {
+                obj = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                obj.GetComponent<Renderer>().material.color = Color.blue;
+                obj.GetComponent<Renderer>().enabled = true;
+                obj.name = name;
+                obj.layer = 22; //interactable layer
+            }
+            else
+            {
+                obj = gameObject;
+            }
+
             obj.AddComponent<CustomInteractableComponent>();
             var interactableComponent = obj.GetComponent<CustomInteractableComponent>();
 
-            ActionsReturnClass actions = GetActionsClass.smethod_12(interactableComponent.Owner, stashContainer);
+            GetActionsClass.Class1517 @class = new GetActionsClass.Class1517();
+            var owner = Singleton<GameWorld>.Instance.MainPlayer.GetComponent<GamePlayerOwner>();
+            @class.owner = owner;
+            @class.container = stashContainer;
+
+            ActionsReturnClass actions = new ActionsReturnClass
+            {
+                Actions =
+                {
+                    new ActionsTypesClass
+                    {
+                        Name = "Open Stash",
+                        Action = new Action(@class.method_0)
+                    }
+                }
+            };
             
             interactableComponent.Actions = actions;
-
             return obj;
         }
 

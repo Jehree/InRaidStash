@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\SP Tarkov\\SPT395_DEV\\Dev\\InRaidStash\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9076ADE2-F4EE-4B5D-B9A6-29A054CF0A7E}|InRaidStash.csproj|c:\\sp tarkov\\spt395_dev\\dev\\inraidstash\\patches\\exfiltrationpointawakepatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9076ADE2-F4EE-4B5D-B9A6-29A054CF0A7E}|InRaidStash.csproj|solutionrelative:patches\\exfiltrationpointawakepatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9076ADE2-F4EE-4B5D-B9A6-29A054CF0A7E}|InRaidStash.csproj|c:\\sp tarkov\\spt395_dev\\dev\\inraidstash\\patches\\gamestartedpatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9076ADE2-F4EE-4B5D-B9A6-29A054CF0A7E}|InRaidStash.csproj|solutionrelative:patches\\gamestartedpatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9076ADE2-F4EE-4B5D-B9A6-29A054CF0A7E}|InRaidStash.csproj|c:\\sp tarkov\\spt395_dev\\dev\\inraidstash\\patches\\getavailableactionspatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9076ADE2-F4EE-4B5D-B9A6-29A054CF0A7E}|InRaidStash.csproj|C:\\SP Tarkov\\SPT395_DEV\\Dev\\InRaidStash\\patches\\getavailableactionspatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9076ADE2-F4EE-4B5D-B9A6-29A054CF0A7E}|InRaidStash.csproj|solutionrelative:patches\\getavailableactionspatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -22,43 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "ExfiltrationPointAwakePatch.cs",
+              "DocumentMoniker": "C:\\SP Tarkov\\SPT395_DEV\\Dev\\InRaidStash\\Patches\\ExfiltrationPointAwakePatch.cs",
+              "RelativeDocumentMoniker": "Patches\\ExfiltrationPointAwakePatch.cs",
+              "ToolTip": "C:\\SP Tarkov\\SPT395_DEV\\Dev\\InRaidStash\\Patches\\ExfiltrationPointAwakePatch.cs",
+              "RelativeToolTip": "Patches\\ExfiltrationPointAwakePatch.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T03:20:11.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "GetAvailableActionsPatch.cs",
               "DocumentMoniker": "C:\\SP Tarkov\\SPT395_DEV\\Dev\\InRaidStash\\Patches\\GetAvailableActionsPatch.cs",
               "RelativeDocumentMoniker": "Patches\\GetAvailableActionsPatch.cs",
               "ToolTip": "C:\\SP Tarkov\\SPT395_DEV\\Dev\\InRaidStash\\Patches\\GetAvailableActionsPatch.cs",
               "RelativeToolTip": "Patches\\GetAvailableActionsPatch.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACEAAAAtAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACEAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-15T00:00:07.881Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Plugin.cs",
               "DocumentMoniker": "C:\\SP Tarkov\\SPT395_DEV\\Dev\\InRaidStash\\Plugin.cs",
               "RelativeDocumentMoniker": "Plugin.cs",
               "ToolTip": "C:\\SP Tarkov\\SPT395_DEV\\Dev\\InRaidStash\\Plugin.cs",
               "RelativeToolTip": "Plugin.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAA0AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-13T21:47:33.577Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GameStartedPatch.cs",
               "DocumentMoniker": "C:\\SP Tarkov\\SPT395_DEV\\Dev\\InRaidStash\\Patches\\GameStartedPatch.cs",
               "RelativeDocumentMoniker": "Patches\\GameStartedPatch.cs",
               "ToolTip": "C:\\SP Tarkov\\SPT395_DEV\\Dev\\InRaidStash\\Patches\\GameStartedPatch.cs",
               "RelativeToolTip": "Patches\\GameStartedPatch.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAA5wFIAAAAkAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAA8wCkAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-13T21:47:34.002Z",
               "EditorCaption": ""

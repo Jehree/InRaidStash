@@ -15,7 +15,6 @@ namespace InRaidStash.Patches
     public class CustomInteractableComponent : InteractableObject, GInterface114
     {
         public ActionsReturnClass Actions;
-        public GamePlayerOwner Owner;
     }
 
     internal class GetAvailableActionsPatch : ModulePatch
@@ -31,7 +30,6 @@ namespace InRaidStash.Patches
             if (!(interactive is CustomInteractableComponent)) return true;
             var customInteractable = interactive as CustomInteractableComponent;
             
-            customInteractable.Owner = owner;
 
             __result = customInteractable.Actions;
             return false;
